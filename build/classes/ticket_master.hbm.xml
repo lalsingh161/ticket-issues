@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+          "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+          "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+          <hibernate-mapping>
+          <class name="com.hugo.ticket.Ticket" table="ticket_master">
+          <id name="ticketno">
+          <generator class="assigned"></generator>
+          </id>
+          
+          <property name="summary"></property>
+          <property name="description"></property>
+          <property name="component"></property>
+          <property name="priority"></property>
+          <property name="version"></property>
+          <property name="milestone"></property>
+          <property name="type"></property>
+          <property name="owner"></property>
+          <property name="status"></property>
+          
+          </class>
+          
+          </hibernate-mapping>

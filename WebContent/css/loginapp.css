@@ -1,0 +1,42 @@
+
+body {
+	
+	background-color:#ffffff;
+	text-align:center;
+	margin:auto;
+}
+
+ #loginstyle {
+   background-color:#40B3DF;
+	 width: 1020px;
+	 height: auto;
+	 margin: auto;
+}
+#registrationstyle {
+   background-color:#40B3DF;
+	 width: 1020px;
+	 height: auto;
+	 margin: auto;
+}
+
+#ticketdetails{
+	
+	 background-color:#A8A8A8 ;
+	 width: auto;
+	 height: auto;
+	 margin: auto;
+
+}
+#reg{
+	background-color:#40B3DF;
+	width: 800px;
+	height: 150px;
+	margin:auto;
+}
+#reg1{
+	background-color:#40B3DF;
+	width: 800px;
+	height: 280px;
+	margin:auto;
+}
+

@@ -1,0 +1,318 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+		<title>Insert title here</title>
+		<link rel="stylesheet" type="text/css" href="css/loginapp.css"/>
+		<script type="text/javascript" src="js/jquery-1.3.2.js"></script>
+		<script type="text/javascript" src="js/loginapp.js"></script>
+ 		<link rel="stylesheet" href="http://code.jquery.com/ui/1.8.24/themes/smoothness/jquery-ui.css" />
+		<script src="http://code.jquery.com/ui/1.8.24/jquery-ui.js"></script>
+		
+		<style type="text/css">
+		
+		ul{
+				list-style-type: none;
+				background-color: #eee8dc;
+				height: auto;
+				width: auto;
+				padding: 2px;
+	
+		}
+		ul li{
+				margin-top: 2px;
+				background-color: #cdc5bf;
+				display: inline;
+				padding-right: 100px;
+				height: 5px;
+				width: auto;
+	
+			}
+		
+		#ticketreg{
+				display: none;
+				height: auto;
+				width: auto;
+			}
+		</style>
+	</head>
+
+  	<body>
+  
+<!--This is a login  div!!!   -->
+		<form>
+		<div  id="loginstyle" align="center"> <h3> Login here </h3>
+		 
+		 <table>
+		 <tr>
+		 <td><label>USERNAME</label></td>
+		 <td><input type="text" id="txt1" name="userName"/></td>
+		 <td><label>PASSWORD</label></td>
+		 <td><input type="password" id="txt2" name="userPassword"/></td>
+		 <td><input type="button" id="loginAuth" value="Submit" /> </td>
+		 <td><input type="reset" value="Clear" /></td>
+		 </tr>
+		 </table> 
+		 
+		</div></form>
+<!--This is a new registration div!!!   -->
+	
+	<form>
+	<div id="registrationstyle" align="center"><h3>New User Registration</h3>
+		  
+		  <table>
+		  <tr>
+		  <td>
+		  <table>
+		  <tr>
+		  <td><label>User Name</label></td>
+		  <td> <input type="text" id="userName" name="userName"/></td>
+		  </tr>
+		  <tr>
+		  <td><label>Password</label></td>
+		  <td><input type="password" id="userPassword" name="userPassword"/></td>
+		  </tr>
+		  <tr>
+		  <td><label>Email</label></td>
+		  <td><input type="text" id="userEmail" name="userEmail"/></td>
+		  </tr>
+		  <tr>
+		  <td><label>PhoneNo</label></td>
+		  <td><input type="text" id="phoneNO" name="phoneNO"/><br/></td>
+		  </tr>
+		  </table>
+		  </td>
+		  </tr>
+		  </table>
+		   <input type="button" id="newregistration" value="Register"/>
+		   <input type="reset" value="Clear" />
+		                     	
+		</div></form>
+		
+<!--This homepage div!!!   -->
+		<form>
+		<div style="display:none;" id="homepage">
+		
+			<ul>
+				<li><a onclick="registerTicket()">NewTicket</a></li>
+				<li id="home"><a onclick="getTicketDetails()">TicketDetails</a></li>
+			</ul>
+	
+		</div></form>
+		
+<!--This is a ticket registration div!!!   -->
+		<form>
+		<div id="ticketreg">		  
+		 	<table>
+			<tr>
+			<td><label>Summary</label></td>
+   			<td><input type="text" name="newticketSummary" id="newticketSummary"/></td>
+			</tr>
+			<tr>
+			<td><label>Description</label></td>
+			<td><textarea name="newticketDescription" id="newticketDescription" rows="4" cols="19"></textarea></td>
+			</tr>
+			</table>
+
+
+			<table>
+			<tr>
+			<td>
+			<table>
+			
+			<tr>
+			<td><label>priority</label>	</td>
+			<td><select  name="newticketPriority" id="newticketPriority" style="width:200px;">
+    						<option>high</option>
+    						<option>low</option>
+   				    		<option>medium</option>
+   			    </select>
+   			</td>
+			</tr>
+
+			<tr>
+			<td> <label>owner</label></td>
+			<td>
+									
+   			<select  name="newticketOwner" id="newticketOwner" style="width:200px;">
+    						<option>user</option>
+    						<option>admin</option>
+   			</select>
+			</td>
+			</tr>
+
+			<tr>
+			<td><label>type</label></td>
+			<td><select  name="newticketType" id="newticketType" style="width:200px;">
+    						<option>Defect</option>
+    						<option>feature</option>
+   						<option>customization</option>
+						<option>enhancement</option>
+   			</select>
+   			</td>
+			</tr>
+
+
+
+			</table>
+			</td>
+			
+			<td>
+			<table>
+			
+			<tr>
+			<td><label>Component</label></td>
+			<td><select  name="newticketComponent" id="newticketComponent" style="width:200px;">
+    						<option>build</option>
+    						<option>roots</option>
+   				    		<option>web</option>
+   			    </select>
+   			</td>
+			</tr>
+
+			
+			<tr>
+			<td><label>milestone</label></td>
+			<td>
+			<select  name="newticketMilestone" id="newticketMilestone" style="width:200px;">
+    						<option>1</option>
+    						<option>2</option>
+   				 			<option>3</option>
+   			</select>
+			</td>
+			</tr>
+			
+			
+			<tr>
+			<td><label>version</label></td>
+			<td><select  name="newticketVersion" id="newticketVersion" style="width:200px;">
+    							<option>1</option>
+    							<option>1.5</option>
+   				 				<option>2</option>
+   			    </select>
+   			</td>
+			</tr>
+			</table>
+			</td>
+						
+   			</tr>   							    
+   			</table>
+			<br/>
+			<input type="submit" id="ticketRegistration" value="SAVE"/>
+			
+		</div>
+		</form>
+
+<!--This is a ticket details retrieving div!!!!   -->
+	<form>
+		<div style="display:none;height:auto;width:1050px;" id="ticketdetails" align="center"><h2> Ticket details </h2>
+			<pre>
+				<input type="button" id="getTickets" value="RefreshDetails" />
+	    	</pre>
+	    <table border="1" bgcolor=#E0F8F7 width="750px" id="ticketTable">
+			<thead>
+				<tr style="background-color:blue;color: white;text-align: center;height=40px">
+				<td>TicketNo</td>
+				<td>Summary</td>
+				<td>Description</td>
+				<td>Component</td>
+				<td>Priority</td>
+				<td>Version</td>
+				<td>Milestone</td>
+				<td>Type</td>
+				<td>owner</td>
+				<td>Status</td>
+				<td>Reporter</td>
+				<td></td>
+				<td></td>
+				</tr>
+			</thead>
+				<tbody>
+			
+			
+				</tbody>
+		</table>   
+		</div>
+	</form>
+	
+<!--This is a ticket details editing div!!!!!  -->
+
+	<form>
+	<div style="display:none;height:auto;" id="ticketbdy">
+			<table>
+			<tr>
+			<td><label>Ticket No</label></td>
+		  	<td><input type="text" name="ticketNo1" id="editticketNo1" disabled/></td>
+		  	<td><input type="hidden" name="editticketNo" id="editticketNo"/></td>
+		  	</tr>
+		  	<tr>
+			<td><label>Comment</label></td>
+			<td> <textarea name="editticketComment" id="editticketComment" rows="4" cols="20"></textarea></td>
+			</tr>
+		  	</table>
+		  	
+		  	<table>
+
+		  	<tr>
+
+		  	<td>
+		  	<table>
+			<tr>
+		  	<td><label>Status</label></td>
+		  	<td><select name="editticketStatus" id="editticketStatus" style="width:200px;">
+    					<option>Working</option>
+    					<option></option>
+   				 	<option></option>
+   			    </select>
+   			</td>
+		  	</tr>
+		  	
+
+		  	</table>
+		  	</td>
+		  	
+		  	
+		  	<td>
+		  	<table>
+		  	<tr>
+		  	<td><label>owner</label></td>
+		  	<td><select  name="editticketOwner" id="editticketOwner" style="width:200px;">
+    						<option>admin</option>
+    						<option>user</option>
+   			</select>
+   			</td>
+
+		  	</tr>
+		  	</table>
+
+		  	</td>
+
+		  	</tr>
+		  	</table> 
+			<br/>		
+			<input type="button" id="edit_ticket" value="SAVE"/>
+			
+	</div>
+		</form>
+		
+		<!--This is a ticket for closing div!!!!!  -->
+		
+		<div style="display:none;" id="ticket_close">
+		<table>
+		<tr>
+		<td><label>Ticket No</label></td>
+		<td><input type="text" name="ticketNo1" id="closeticketNo1" disabled/></td>
+		<td><input type="hidden" name="editticketNo" id="closeticketNo"/></td>
+		</tr>
+		<tr>
+		<td><label>Reason for closing</label></td>
+		<td><input type="text" name="resolution" id="resolution"/></td>
+		</tr>
+		</table>
+		<input type="button" id="close_ticket" value="SAVE"/>
+		</div>
+		
+
+  </body>
+
+</html>
